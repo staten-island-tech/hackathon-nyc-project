@@ -8,8 +8,7 @@ data = response.json()
 
 @app.route('/')
 def index():
-    response = requests.get("https://zenquotes.io/api/quotes")
-    data = response.json()
+
     quote_data = random.choice(data)
     html_quote = quote_data['h']
 
@@ -19,3 +18,4 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 
+print("hi")
