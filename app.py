@@ -10,7 +10,7 @@ data = response.json()
 def index():
 
     quote_data = random.choice(data)
-    html_quote = quote_data['h']
+    html_quote = quote_data['q']
 
     return render_template("index.html", html_quote=html_quote)
 
@@ -18,4 +18,3 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 
-print("hi")
